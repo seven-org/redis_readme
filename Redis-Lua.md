@@ -1,5 +1,7 @@
 # Redis 中 Lua 脚本的应用和实践
 
+内容可参考: http://redisdoc.com/script/index.html
+
 ## redis lua 脚本相关命令
 
 redis 自 2.6.0 加入了 lua 脚本相关的命令， `EVAL`、 `EVALSHA`、 `SCRIPT EXISTS`、 `SCRIPT FLUSH`、 `SCRIPT KILL`、 `SCRIPT LOAD`，自 3.2.0 加入了 lua 脚本的调试功能和命令 `SCRIPT DEBUG`。这里对命令做下简单的介绍。
@@ -65,7 +67,6 @@ root@5bef253efe3e:/data# redis-cli --eval buy.lua buyMemberSet goods_id_1 , 1
 (integer) 1
 root@5bef253efe3e:/data# redis-cli --eval buy.lua buyMemberSet goods_id_1 , 1
 (integer) 0
-root@5bef253efe3e:/data# ^C
 root@5bef253efe3e:/data# redis-cli --eval buy.lua buyMemberSet goods_id_1 , 2
 (integer) 1
 root@5bef253efe3e:/data# redis-cli --eval buy.lua buyMemberSet goods_id_1 , 3
